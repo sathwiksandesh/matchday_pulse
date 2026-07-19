@@ -1,0 +1,29 @@
+{
+  "name": "matchday-pulse",
+  "private": true,
+  "version": "1.0.0",
+  "description": "GenAI copilot for FIFA World Cup 2026 stadium operations, fan experience, and volunteer coordination.",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w server && npm run build -w client",
+    "lint": "npm run lint -w server && npm run lint -w client",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w client",
+    "test": "npm run test -w server && npm run test -w client",
+    "test:coverage": "npm run test:coverage -w server && npm run test:coverage -w client",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "preflight": "bash scripts/preflight.sh"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
